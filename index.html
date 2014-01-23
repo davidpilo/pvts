@@ -1,86 +1,141 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>PVTS by davidpilo</title>
-  </head>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Pilo Visual Tools for Scheme - PVTS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-    <div id="container">
-      <div class="inner">
+<!-- Latest jQuery -->
+<script src="//code.jquery.com/jquery.js"></script>
 
-        <header>
-          <h1>PVTS</h1>
-          <h2>A Visual Interpreter for the Scheme Programming Language.</h2>
-        </header>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/davidpilo/pvts/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/davidpilo/pvts/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/davidpilo/pvts" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+<!-- My CSS -->
+<link href="/css/main.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo-menu" href="#">PVTS</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http://sourceforge.net/projects/pilovisualtools/files/latest/download" target="_blank">Download</a></li>
+                <li><a href="language.html">Language</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="jumbotron">
+        <h1>Ever wondered what the Quicksort Algorithm looks like?</h1>
+        <p>Visualize lists, pointers and function calls in <strong>your code</strong>. PVTS is a visual interpreter for the Scheme functional programming languages.</p>
+        <p>It is great for teachers and students as a supporting learning tool.</p>
+        <p>
+        <a data-toggle="modal" href="#myModal" class="btn btn-lg btn-primary" href="../../components/#navbar">Click here to see the answer Â»</a>
+        <a class="btn btn-lg btn-success btn-primary pull-right" target="_blank" href="http://sourceforge.net/projects/pilovisualtools/files/latest/download">Or download PVTS now from sourceforge.com Â</a>
+        <small style="font-size:65%" class="pull-right">PVTS is an executable JAR file and requires the Java Runtime Environment (JRE), you can get it <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">here.</a></small>
+        </p>
+    </div>
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="img/list-example.png">
+                <h2>Linked List Viewer</h2>
+                <p>PVTS will show you all the linked lists you have in your code. It will help you understand how pointers in linked-lists work.</p>
+                <!--<p><a class="btn btn-default" href="#">View details Â</a></p>-->
+            </div>    <div class="col-lg-4">
+                <img src="img/calls-example.png">
+                <h2>Function Call Viewer</h2>
+                <p>Binary functions as Fibonacci are more easily understood visually. PVTS will draw the functions you defined and called.</p>
+                <!--<p><a class="btn btn-default" href="#">View details Â</a</p-->
+            </div>
+            <div class="col-lg-4">
+                <img src="img/environment-example.png">
+                <h2>Enviroment Viewer</h2>
+                <p>Keep track of the variables and functions you have defined in the global environment. A list of these variables and functions is easily accessible to review them.</p>
+                <!--<p><a class="btn btn-default" href="#">View details Â</a></p>-->
+            </div>
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
 
         <hr>
 
-        <section id="main_content">
-          <h1>
-<a name="visualize-your-code-as-its-been-executed" class="anchor" href="#visualize-your-code-as-its-been-executed"><span class="octicon octicon-link"></span></a>Visualize your code as itÂ´s been executed</h1>
+        <div class="row">
+            <div class="col-md-7">
+                <h2>Fibonacci Function Calls <span class="text-muted">example</span></h2>
+                <p class="lead">The figure on the right is an example of running the code below in the PVTS visual interpreter that demonstrates how the Fibonacci Algorithm works in a functional programming enviroment.</p>
+                <pre><code>; Lets define Fibonacci:
+(define (fib n)
+(cond
+((= n 1) 1)
+((= n 0) 0)
+(else (+ (fib (- n 1)) (fib (- n 2))))))
 
-<p>Visualize lists, pointers, and function calls in <strong>your code</strong>. PVTS is a visual interpreter for the Scheme programming language. It is great for teacher and students as a learning tool.</p>
+; (fib 6) evaluates to
+(fib 6)</code></pre>
+            </div>
+            <div class="col-md-5">
+                <img class="img-responsive" src="img/fibonacci-4.png">
+            </div>
+        </div>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+        <hr>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+        <div class="row">
+            <h2>Let PVTS help you learn the basics of functional programming in Scheme.</h2>
+            <p class="lead">Although Pilo Visual Tools for Scheme is a basic interpreter (<a href="language.html" target="_blank">learn more about PVTS language support</a>), anybody that is learning the basics of recursion or wants to enhance his understanding of how pointers and lists work can benefit from giving this a try.</p>
+        </div>
+        <div class="row">
+            <img class="img-responsive" src="img/pvts-compete-example-home.png">
+        </div>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+        <hr>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and weâ€™ll help you sort it out.</p>
-        </section>
-
+        <!-- FOOTER -->
         <footer>
-          PVTS is maintained by <a href="https://github.com/davidpilo">davidpilo</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+            PVTS is maintained by <a href="https://github.com/davidpilo">davidpilo</a><br>
+            This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
         </footer>
 
-                  <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-2377449-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-      </div>
     </div>
-  </body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog my-modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Close</button>
+                    <h4 class="modal-title">This figures shows what coding and running the Quicksort algorithm for this list: (5 22 13 1) in PVTS:</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src="img/quicksort-example-home.png">
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+</div>    
+
+</body>
 </html>
