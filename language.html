@@ -1,225 +1,235 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PVTS Supported Language - PVTS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>PVTS Supported Language - PVTS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Latest jQuery -->
-    <script src="//code.jquery.com/jquery.js"></script>
+<!-- Latest jQuery -->
+<script src="//code.jquery.com/jquery.js"></script>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-    <!-- My CSS -->
-    <link href="/css/main.css" rel="stylesheet">
+<!-- My CSS -->
+<link href="/css/main.css" rel="stylesheet">
 
-  </head>
-  <body>
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
+</head>
+<body>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-2377449-1', 'davidpilo.com');
+ga('send', 'pageview');
+
+</script>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand logo-menu" href="#">PVTS</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo-menu" href="#">PVTS</a>
         </div>
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="http://sourceforge.net/projects/pilovisualtools/files/latest/download" target="_blank">Download</a></li>
-            <li><a href="language.html">Language</a></li>
-          </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http://sourceforge.net/projects/pilovisualtools/files/latest/download" target="_blank">Download</a></li>
+                <li><a href="language.html">Language</a></li>
+            </ul>
         </div><!--/.nav-collapse -->
-      </div>
     </div>
+</div>
 
-    <div class="container">
-   
-      <style type="text/css">
-  li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 16.0px 'Times New Roman'; color: #333333; background-color: #ffffff}
-  li.li2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px Courier; color: #333333; background-color: #ffffff}
-  li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 16.0px Courier; color: #333333; background-color: #ffffff}
-  span.s1 {font: 16.0px Courier; color: #333333; background-color: #ffffff}
-  span.s2 {font: 14.0px Courier; color: #333333; background-color: #ffffff}
-  span.s3 {font: 16.0px 'Times New Roman'}
-  ul.ul1 {list-style-type: disc}
-  ul.ul2 {list-style-type: circle}
-  ul.ul3 {list-style-type: square}
-</style>
-<ul class="ul1">
-  <li class="li1"><b>PROGRAM</b></li>
-  <ul class="ul2">
-    <li class="li1"><b>DEF-OR-EXP</b> ...</li>
-  </ul>
-  <li class="li1"><b>DEF-OR-EXP</b></li>
-  <ul class="ul2">
-    <li class="li1"><b>DEFINITION</b></li>
-    <li class="li1"><b>EXPRESSION</b></li>
-  </ul>
-  <li class="li1"><b>DEFINITION</b></li>
-  <ul class="ul2">
-    <li class="li2">(<span class="s1">define</span> (<b>NAME</b> <b>NAME</b> ...) <b>EXPRESSION</b>)</li>
-    <li class="li2">(<span class="s1">define</span> <b>NAME</b> <b>EXPRESSION</b>)</li>
-  </ul>
-  <li class="li1"><b>EXPRESSION</b></li>
-  <ul class="ul2">
-    <li class="li2">(<span class="s1">set!</span> <b>NAME</b> <b>EXPRESSION</b>)</li>
-    <li class="li2">(<span class="s1">lambda</span> (<b>NAME</b> ...) <b>EXPRESSION</b>)</li>
-    <li class="li2">(<span class="s1">let</span> ((<b>NAME</b> <b>EXPRESSION</b>) ...) <b>EXPRESSION</b>)</li>
-    <li class="li2">(<b>PRIM-OP</b> <b>EXPRESSION</b> ...)</li>
-    <li class="li2">(<span class="s1">cond</span> (<b>EXPRESSION</b> <b>EXPRESSION</b>) (<b>EXPRESSION</b> <b>EXPRESSION</b>) ...)</li>
-    <li class="li2">(<span class="s1">cond</span> (<b>EXPRESSION</b> <b>EXPRESSION</b>) ... (<span class="s1">else</span> <b>EXPRESSION</b>))</li>
-    <li class="li2">(<span class="s1">if</span> <b>EXPRESSION</b> <b>EXPRESSION</b> <b>EXPRESSION</b>)</li>
-    <li class="li2">(<span class="s1">and</span> <b>EXPRESSION</b> <b>EXPRESSION</b> <b>EXPRESSION</b> ...)</li>
-    <li class="li2">(<span class="s1">or</span> <b>EXPRESSION</b> <b>EXPRESSION</b> <b>EXPRESSION</b> ...)</li>
-    <li class="li2"><b>NAME</b></li>
-    <li class="li1"><span class="s2">'</span><b>QUOTED</b></li>
-    <li class="li1"><b>NUMBER</b></li>
-    <li class="li1"><b>STRING</b></li>
-    <li class="li1"><b>CHARACTER</b></li>
-  </ul>
-  <li class="li1"><b>NAME</b></li>
-  <ul class="ul2">
-    <li class="li1">a sequence of keyboard characters not including: space " , ' ` ( ) [ ] { } | ; #</li>
-  </ul>
-  <li class="li1"><b>QUOTED</b></li>
-  <ul class="ul2">
-    <li class="li2"><b>NAME</b></li>
-    <li class="li1"><b>NUMBER</b></li>
-    <li class="li1"><b>STRING</b></li>
-    <li class="li1"><b>CHARACTER</b></li>
-    <li class="li1"><span class="s2">'</span><b>QUOTED</b></li>
-  </ul>
-  <li class="li1"><b>PRIM-OP</b>s</li>
-  <ul class="ul2">
-    <li class="li1"><i>Numbers: Integers, Reals.</i></li>
-    <ul class="ul3">
-      <li class="li3">*<span class="s3"> : </span>(num num num ... -&gt; num)</li>
-      <li class="li3">+<span class="s3"> : </span>(num num num ... -&gt; num)</li>
-      <li class="li3">-<span class="s3"> : </span>(num num ... -&gt; num)</li>
-      <li class="li3">/<span class="s3"> : </span>(num num num ... -&gt; num)</li>
-      <li class="li3">&lt;<span class="s3"> : </span>(real real real ... -&gt; boolean)</li>
-      <li class="li3">&lt;=<span class="s3"> : </span>(real real real ... -&gt; boolean)</li>
-      <li class="li3">=<span class="s3"> : </span>(num num num ... -&gt; boolean)</li>
-      <li class="li3">&gt;<span class="s3"> : </span>(real real real ... -&gt; boolean)</li>
-      <li class="li3">&gt;=<span class="s3"> : </span>(real real ... -&gt; boolean)</li>
-      <li class="li3">abs<span class="s3"> : </span>(real -&gt; real)</li>
-      <li class="li3">acos<span class="s3"> : </span>(num -&gt; num)</li>
-      <li class="li3">asin<span class="s3"> : </span>(num -&gt; num)</li>
-      <li class="li3">atan<span class="s3"> : </span>(num -&gt; num)</li>
-      <li class="li3">ceiling<span class="s3"> : </span>(real -&gt; int)</li>
-      <li class="li3">cos<span class="s3"> : </span>(num -&gt; num)</li>
-      <li class="li3">even?<span class="s3"> : </span>(integer -&gt; bool)</li>
-      <li class="li3">exp<span class="s3"> : </span>(num -&gt; num)</li>
-      <li class="li3">expt<span class="s3"> : </span>(num num -&gt; num)</li>
-      <li class="li3">floor<span class="s3"> : </span>(real -&gt; int)</li>
-      <li class="li3">gcd<span class="s3"> : </span>(int int -&gt; int)</li>
-      <li class="li3">integer?<span class="s3"> : </span>(any -&gt; bool)</li>
-      <li class="li3">log<span class="s3"> : </span>(num -&gt; num)</li>
-      <li class="li3">max<span class="s3"> : </span>(real real ... -&gt; real)</li>
-      <li class="li3">min<span class="s3"> : </span>(real real ... -&gt; real)</li>
-      <li class="li3">modulo<span class="s3"> : </span>(int int -&gt; int)</li>
-      <li class="li3">negative?<span class="s3"> : </span>(number -&gt; bool)</li>
-      <li class="li3">number?<span class="s3"> : </span>(any -&gt; boolean)</li>
-      <li class="li3">odd?<span class="s3"> : </span>(integer -&gt; bool)</li>
-      <li class="li3">positive?<span class="s3"> : </span>(number -&gt; bool)</li>
-      <li class="li3">real?<span class="s3"> : </span>(any -&gt; bool)</li>
-      <li class="li3">sin<span class="s3"> : </span>(num -&gt; num)</li>
-      <li class="li3">sqrt<span class="s3"> : </span>(num -&gt; num)</li>
-      <li class="li3">tan<span class="s3"> : </span>(num -&gt; num)</li>
-      <li class="li3">zero?<span class="s3"> : </span>(number -&gt; bool)</li>
+<div class="container">
+
+    <style type="text/css">
+li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 16.0px 'Times New Roman'; color: #333333; background-color: #ffffff}
+li.li2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px Courier; color: #333333; background-color: #ffffff}
+li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 16.0px Courier; color: #333333; background-color: #ffffff}
+span.s1 {font: 16.0px Courier; color: #333333; background-color: #ffffff}
+span.s2 {font: 14.0px Courier; color: #333333; background-color: #ffffff}
+span.s3 {font: 16.0px 'Times New Roman'}
+ul.ul1 {list-style-type: disc}
+ul.ul2 {list-style-type: circle}
+ul.ul3 {list-style-type: square}
+    </style>
+    <ul class="ul1">
+        <li class="li1"><b>PROGRAM</b></li>
+        <ul class="ul2">
+            <li class="li1"><b>DEF-OR-EXP</b> ...</li>
+        </ul>
+        <li class="li1"><b>DEF-OR-EXP</b></li>
+        <ul class="ul2">
+            <li class="li1"><b>DEFINITION</b></li>
+            <li class="li1"><b>EXPRESSION</b></li>
+        </ul>
+        <li class="li1"><b>DEFINITION</b></li>
+        <ul class="ul2">
+            <li class="li2">(<span class="s1">define</span> (<b>NAME</b> <b>NAME</b> ...) <b>EXPRESSION</b>)</li>
+            <li class="li2">(<span class="s1">define</span> <b>NAME</b> <b>EXPRESSION</b>)</li>
+        </ul>
+        <li class="li1"><b>EXPRESSION</b></li>
+        <ul class="ul2">
+            <li class="li2">(<span class="s1">set!</span> <b>NAME</b> <b>EXPRESSION</b>)</li>
+            <li class="li2">(<span class="s1">lambda</span> (<b>NAME</b> ...) <b>EXPRESSION</b>)</li>
+            <li class="li2">(<span class="s1">let</span> ((<b>NAME</b> <b>EXPRESSION</b>) ...) <b>EXPRESSION</b>)</li>
+            <li class="li2">(<b>PRIM-OP</b> <b>EXPRESSION</b> ...)</li>
+            <li class="li2">(<span class="s1">cond</span> (<b>EXPRESSION</b> <b>EXPRESSION</b>) (<b>EXPRESSION</b> <b>EXPRESSION</b>) ...)</li>
+            <li class="li2">(<span class="s1">cond</span> (<b>EXPRESSION</b> <b>EXPRESSION</b>) ... (<span class="s1">else</span> <b>EXPRESSION</b>))</li>
+            <li class="li2">(<span class="s1">if</span> <b>EXPRESSION</b> <b>EXPRESSION</b> <b>EXPRESSION</b>)</li>
+            <li class="li2">(<span class="s1">and</span> <b>EXPRESSION</b> <b>EXPRESSION</b> <b>EXPRESSION</b> ...)</li>
+            <li class="li2">(<span class="s1">or</span> <b>EXPRESSION</b> <b>EXPRESSION</b> <b>EXPRESSION</b> ...)</li>
+            <li class="li2"><b>NAME</b></li>
+            <li class="li1"><span class="s2">'</span><b>QUOTED</b></li>
+            <li class="li1"><b>NUMBER</b></li>
+            <li class="li1"><b>STRING</b></li>
+            <li class="li1"><b>CHARACTER</b></li>
+        </ul>
+        <li class="li1"><b>NAME</b></li>
+        <ul class="ul2">
+            <li class="li1">a sequence of keyboard characters not including: space " , ' ` ( ) [ ] { } | ; #</li>
+        </ul>
+        <li class="li1"><b>QUOTED</b></li>
+        <ul class="ul2">
+            <li class="li2"><b>NAME</b></li>
+            <li class="li1"><b>NUMBER</b></li>
+            <li class="li1"><b>STRING</b></li>
+            <li class="li1"><b>CHARACTER</b></li>
+            <li class="li1"><span class="s2">'</span><b>QUOTED</b></li>
+        </ul>
+        <li class="li1"><b>PRIM-OP</b>s</li>
+        <ul class="ul2">
+            <li class="li1"><i>Numbers: Integers, Reals.</i></li>
+            <ul class="ul3">
+                <li class="li3">*<span class="s3"> : </span>(num num num ... -&gt; num)</li>
+                <li class="li3">+<span class="s3"> : </span>(num num num ... -&gt; num)</li>
+                <li class="li3">-<span class="s3"> : </span>(num num ... -&gt; num)</li>
+                <li class="li3">/<span class="s3"> : </span>(num num num ... -&gt; num)</li>
+                <li class="li3">&lt;<span class="s3"> : </span>(real real real ... -&gt; boolean)</li>
+                <li class="li3">&lt;=<span class="s3"> : </span>(real real real ... -&gt; boolean)</li>
+                <li class="li3">=<span class="s3"> : </span>(num num num ... -&gt; boolean)</li>
+                <li class="li3">&gt;<span class="s3"> : </span>(real real real ... -&gt; boolean)</li>
+                <li class="li3">&gt;=<span class="s3"> : </span>(real real ... -&gt; boolean)</li>
+                <li class="li3">abs<span class="s3"> : </span>(real -&gt; real)</li>
+                <li class="li3">acos<span class="s3"> : </span>(num -&gt; num)</li>
+                <li class="li3">asin<span class="s3"> : </span>(num -&gt; num)</li>
+                <li class="li3">atan<span class="s3"> : </span>(num -&gt; num)</li>
+                <li class="li3">ceiling<span class="s3"> : </span>(real -&gt; int)</li>
+                <li class="li3">cos<span class="s3"> : </span>(num -&gt; num)</li>
+                <li class="li3">even?<span class="s3"> : </span>(integer -&gt; bool)</li>
+                <li class="li3">exp<span class="s3"> : </span>(num -&gt; num)</li>
+                <li class="li3">expt<span class="s3"> : </span>(num num -&gt; num)</li>
+                <li class="li3">floor<span class="s3"> : </span>(real -&gt; int)</li>
+                <li class="li3">gcd<span class="s3"> : </span>(int int -&gt; int)</li>
+                <li class="li3">integer?<span class="s3"> : </span>(any -&gt; bool)</li>
+                <li class="li3">log<span class="s3"> : </span>(num -&gt; num)</li>
+                <li class="li3">max<span class="s3"> : </span>(real real ... -&gt; real)</li>
+                <li class="li3">min<span class="s3"> : </span>(real real ... -&gt; real)</li>
+                <li class="li3">modulo<span class="s3"> : </span>(int int -&gt; int)</li>
+                <li class="li3">negative?<span class="s3"> : </span>(number -&gt; bool)</li>
+                <li class="li3">number?<span class="s3"> : </span>(any -&gt; boolean)</li>
+                <li class="li3">odd?<span class="s3"> : </span>(integer -&gt; bool)</li>
+                <li class="li3">positive?<span class="s3"> : </span>(number -&gt; bool)</li>
+                <li class="li3">real?<span class="s3"> : </span>(any -&gt; bool)</li>
+                <li class="li3">sin<span class="s3"> : </span>(num -&gt; num)</li>
+                <li class="li3">sqrt<span class="s3"> : </span>(num -&gt; num)</li>
+                <li class="li3">tan<span class="s3"> : </span>(num -&gt; num)</li>
+                <li class="li3">zero?<span class="s3"> : </span>(number -&gt; bool)</li>
+            </ul>
+            <li class="li1"><i>Booleans</i></li>
+            <ul class="ul3">
+                <li class="li3">boolean?<span class="s3"> : </span>(any -&gt; boolean)</li>
+                <li class="li3">not<span class="s3"> : </span>(boolean -&gt; boolean)</li>
+            </ul>
+            <li class="li1"><i>Symbols</i></li>
+            <ul class="ul3">
+                <li class="li3">symbol?<span class="s3"> : </span>(any -&gt; boolean)</li>
+            </ul>
+            <li class="li1"><i>Lists</i></li>
+            <ul class="ul3">
+                <li class="li3">append<span class="s3"> : </span>((listof any) ... -&gt; (listof any))</li>
+                <li class="li3">car<span class="s3"> : </span>((cons Y (listof X)) -&gt; Y)</li>
+                <li class="li3">cdr<span class="s3"> : </span>((cons Y (listof X)) -&gt; (listof X))</li>
+                <li class="li3">caar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">cadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">caaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">caadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">caaaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">caaadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">cadar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">caddr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">cadaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">cadadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">caadar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">caaddr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">cdar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">cddr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">cdaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">cdadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">cdaaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">cdaadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">cddar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">cdddr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">cddaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">cddadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">cdddar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">cddddr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">caddar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">cadadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
+                <li class="li3">cdadar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
+                <li class="li3">cons<span class="s3"> : </span>(X (listof X) -&gt; (listof X))</li>
+                <li class="li3">length<span class="s3"> : </span>(list -&gt; number)</li>
+                <li class="li3">list<span class="s3"> : </span>(any ... (listof any) -&gt; (listof any))</li>
+                <li class="li3">list<span class="s3"> : </span>(any ... -&gt; (listof any))</li>
+                <li class="li3">list?<span class="s3"> : </span>(any -&gt; boolean)</li>
+                <li class="li3">member<span class="s3"> : </span>(any list -&gt; (union false list))</li>
+                <li class="li3">null?<span class="s3"> : </span>(any -&gt; boolean)</li>
+                <li class="li3">reverse<span class="s3"> : </span>(list -&gt; list)</li>
+                <li class="li3">set-car!<span class="s3"> : </span>((cons Y (listof X)) Y -&gt; void)</li>
+                <li class="li3">set-cdr!<span class="s3"> : </span>((cons Y (listof X)) (listof X) -&gt; void)</li>
+            </ul>
+            <li class="li1"><i>Characters</i></li>
+            <ul class="ul3">
+                <li class="li3">char?<span class="s3"> : </span>(any -&gt; boolean)</li>
+            </ul>
+            <li class="li1"><i>Strings</i></li>
+            <ul class="ul3">
+                <li class="li3">string?<span class="s3"> : </span>(any -&gt; boolean)</li>
+            </ul>
+            <li class="li1"><i>Misc</i></li>
+            <ul class="ul3">
+                <li class="li3">eq?<span class="s3"> : </span>(any any -&gt; boolean)</li>
+                <li class="li3">equal?<span class="s3"> : </span>(any any -&gt; boolean)</li>
+                <li class="li3">eqv?<span class="s3"> : </span>(any any -&gt; boolean)</li>
+            </ul>
+            <li class="li1"><i>Higher-Order Functions</i></li>
+            <ul class="ul3">
+                <li class="li3">apply<span class="s3"> : </span>((X-1 ... X-N -&gt; Y) X-1 ... X-i (list X-i+1 ... X-N) -&gt; Y)</li>
+                <li class="li3">for-each<span class="s3"> : </span>((any ... -&gt; any) (listof any) ... -&gt; void)</li>
+                <li class="li3">map<span class="s3"> : </span>((X ... -&gt; Z) (listof X) ... -&gt; (listof Z))</li>
+                <li class="li3">procedure?<span class="s3"> : </span>(any -&gt; boolean)</li>
+            </ul>
+            <li class="li1"><i>Printing</i></li>
+            <ul class="ul3">
+                <li class="li3">display<span class="s3"> : </span>(any -&gt; void)</li>
+                <li class="li3">newline<span class="s3"> : </span>(-&gt; void)</li>
+            </ul>
+        </ul>
     </ul>
-    <li class="li1"><i>Booleans</i></li>
-    <ul class="ul3">
-      <li class="li3">boolean?<span class="s3"> : </span>(any -&gt; boolean)</li>
-      <li class="li3">not<span class="s3"> : </span>(boolean -&gt; boolean)</li>
-    </ul>
-    <li class="li1"><i>Symbols</i></li>
-    <ul class="ul3">
-      <li class="li3">symbol?<span class="s3"> : </span>(any -&gt; boolean)</li>
-    </ul>
-    <li class="li1"><i>Lists</i></li>
-    <ul class="ul3">
-      <li class="li3">append<span class="s3"> : </span>((listof any) ... -&gt; (listof any))</li>
-      <li class="li3">car<span class="s3"> : </span>((cons Y (listof X)) -&gt; Y)</li>
-      <li class="li3">cdr<span class="s3"> : </span>((cons Y (listof X)) -&gt; (listof X))</li>
-      <li class="li3">caar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">cadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">caaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">caadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">caaaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">caaadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">cadar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">caddr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">cadaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">cadadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">caadar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">caaddr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">cdar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">cddr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">cdaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">cdadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">cdaaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">cdaadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">cddar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">cdddr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">cddaar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">cddadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">cdddar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">cddddr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">caddar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">cadadr<span class="s3"> : </span>((listof any) -&gt; (listof any))</li>
-      <li class="li3">cdadar<span class="s3"> : </span>((listof any)) -&gt; any)</li>
-      <li class="li3">cons<span class="s3"> : </span>(X (listof X) -&gt; (listof X))</li>
-      <li class="li3">length<span class="s3"> : </span>(list -&gt; number)</li>
-      <li class="li3">list<span class="s3"> : </span>(any ... (listof any) -&gt; (listof any))</li>
-      <li class="li3">list<span class="s3"> : </span>(any ... -&gt; (listof any))</li>
-      <li class="li3">list?<span class="s3"> : </span>(any -&gt; boolean)</li>
-      <li class="li3">member<span class="s3"> : </span>(any list -&gt; (union false list))</li>
-      <li class="li3">null?<span class="s3"> : </span>(any -&gt; boolean)</li>
-      <li class="li3">reverse<span class="s3"> : </span>(list -&gt; list)</li>
-      <li class="li3">set-car!<span class="s3"> : </span>((cons Y (listof X)) Y -&gt; void)</li>
-      <li class="li3">set-cdr!<span class="s3"> : </span>((cons Y (listof X)) (listof X) -&gt; void)</li>
-    </ul>
-    <li class="li1"><i>Characters</i></li>
-    <ul class="ul3">
-      <li class="li3">char?<span class="s3"> : </span>(any -&gt; boolean)</li>
-    </ul>
-    <li class="li1"><i>Strings</i></li>
-    <ul class="ul3">
-      <li class="li3">string?<span class="s3"> : </span>(any -&gt; boolean)</li>
-    </ul>
-    <li class="li1"><i>Misc</i></li>
-    <ul class="ul3">
-      <li class="li3">eq?<span class="s3"> : </span>(any any -&gt; boolean)</li>
-      <li class="li3">equal?<span class="s3"> : </span>(any any -&gt; boolean)</li>
-      <li class="li3">eqv?<span class="s3"> : </span>(any any -&gt; boolean)</li>
-    </ul>
-    <li class="li1"><i>Higher-Order Functions</i></li>
-    <ul class="ul3">
-      <li class="li3">apply<span class="s3"> : </span>((X-1 ... X-N -&gt; Y) X-1 ... X-i (list X-i+1 ... X-N) -&gt; Y)</li>
-      <li class="li3">for-each<span class="s3"> : </span>((any ... -&gt; any) (listof any) ... -&gt; void)</li>
-      <li class="li3">map<span class="s3"> : </span>((X ... -&gt; Z) (listof X) ... -&gt; (listof Z))</li>
-      <li class="li3">procedure?<span class="s3"> : </span>(any -&gt; boolean)</li>
-    </ul>
-    <li class="li1"><i>Printing</i></li>
-    <ul class="ul3">
-      <li class="li3">display<span class="s3"> : </span>(any -&gt; void)</li>
-      <li class="li3">newline<span class="s3"> : </span>(-&gt; void)</li>
-    </ul>
-  </ul>
-</ul>
 
 
 
-    </div>    
+</div>    
 
-  </body>
+</body>
 </html>
